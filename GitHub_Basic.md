@@ -42,6 +42,24 @@ git push
 
 Before using `git add .`, check `git status` to avoid accidentally uploading large simulation outputs, logs, `.npy`, `.npz`, `.h5`, or temporary files.
 
+
+# Contribute safely
+First clone the file if you haven't before
+```bash
+git clone https://github.com/YehGroup/ModelBridge.git
+cd ModelBridge
+```
+Before editing any files, create your own branch
+```bash
+git checkout -b yourbranch
+```
+Edit ahead. Then:
+```bash
+git add .
+git commit -m "Update file"
+git push -u origin yourbranch
+```
+
 # Other Files
 
 ## `.gitignore`
