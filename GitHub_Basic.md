@@ -41,3 +41,8 @@ git push
 > Git does not track empty folders.
 
 Before using `git add .`, check `git status` to avoid accidentally uploading large simulation outputs, logs, `.npy`, `.npz`, `.h5`, or temporary files.
+
+# Other Files
+
+## `.gitignore`
+This is a file that tells Git: "do not track these files." This is so that very large data files will not be uploaded into Github. Only scripts will be included. 
