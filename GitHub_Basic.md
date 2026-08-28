@@ -1,4 +1,4 @@
-# Main branch Workflow
+# Main Branch Workflow
 
 The local working copy of this repository is located at:
 
@@ -35,7 +35,7 @@ YehGroup/ModelBridge
 Before using `git add .`, check `git status` to avoid accidentally uploading large simulation outputs, logs, `.npy`, `.npz`, `.h5`, or temporary files.
 
 
-# Contribute safely
+# Side Branch Workflow - Contribute safely
 
 ## First time only: clone the repository
 
