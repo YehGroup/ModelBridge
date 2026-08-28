@@ -6,6 +6,13 @@ The local working copy of this repository is located at:
 /media/yehlab/C/Xiang/ModelBridge
 ```
 
+If you are working directly in this local copy, change git user to you in order to reflect your contribution.
+
+```bash
+git config user.name "YOUR_GITHUB_USERNAME"
+git config user.email "YOUR_GITHUB_EMAIL"
+```
+
 To upload changes to GitHub:
 
 ```bash
@@ -35,7 +42,7 @@ YehGroup/ModelBridge
 Before using `git add .`, check `git status` to avoid accidentally uploading large simulation outputs, logs, `.npy`, `.npz`, `.h5`, or temporary files.
 
 
-# Side Branch Workflow - Contribute safely
+# Side Branch Workflow - contribute safely
 
 ## First time only: clone the repository
 
@@ -118,7 +125,7 @@ So later you can retrieve exactly that version
 ```bash
 git checkout v0.1.0
 ```
-To see only versions
+To see only important versions
 ```bash
 git tag
 ```
