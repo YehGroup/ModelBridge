@@ -139,6 +139,7 @@ On the GitHub website, the merge button has three options
 * Create a merge commit — preserves the branch/commit structure.
 * Squash and merge — combines all commits from that branch into one commit.
 * Rebase and merge — keeps individual commits but rewrites them onto `main` as a straight line.
+
 We should probably always do only `Create a merge commit`. So 
 ```bash
 git log --oneline --graph --all
