@@ -67,6 +67,10 @@ git push -u origin yourbranch
 ```bash
 git checkout yourbranch
 ```
+if someone else pushed new commits to that same branch (they probably shouldn't), sync the changes to your local
+```bash
+git pull
+```
 Edit ahead. Then:
 ```bash
 git add .
