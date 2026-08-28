@@ -129,6 +129,10 @@ To see only important versions
 ```bash
 git tag
 ```
+### Version Convention
+* `0.1.0 -> 0.1.1` = Bug fix
+* `0.1.1 -> 0.2.0` = New functionality, compatiable with previous version
+* `0.2.0 -> 1.0.0` = Changes that breaks previous functions
 
 ## Branch history
 On the GitHub website, the merge button has three options
