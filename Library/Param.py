@@ -1,6 +1,12 @@
+"""
+Module-level documentation goes here.
+"""
+
 import numpy as np
 
 GROUPS = ["A", "B", "C", "D"]
+
+# --8<-- [start:group-size]
 
 GROUP_SIZE = {
     "A": 2,
@@ -8,6 +14,8 @@ GROUP_SIZE = {
     "C": 3,
     "D": 3,
 }
+
+# --8<-- [end:group-size]
 
 N_ORBITALS = sum(GROUP_SIZE.values())   # 11
 
