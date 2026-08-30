@@ -17,13 +17,10 @@ nav = [
       { "Parameters" = "library/param.md" },
   ]},
 
-  { "Zensical Tutorial" = [
-      { "Zensical Example" = "zensical_tutorial/zensical-index.md" },
-      { "Markdown Guide" = "zensical_tutorial/markdown.md" },
-  ]},
-
-  { "GitHub Tutorial" = [
-      { "Github Basic" = "github_tutorial/GitHub_Basic.md" },
+  { "Developer Guide" = [
+      { "Github Basic" = "developer_guide/gitHub_basic.md" },
+      { "Markdown Basic" = "developer_guide/markdown.md" },
+      { "Zensical Example" = "developer_guide/zensical-index.md" },
   ]},
 ]
 

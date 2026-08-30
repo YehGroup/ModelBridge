@@ -4,6 +4,18 @@ ModelBridge is a collection of tools for constructing and running theoretical an
 
 > Ok ModelBridge is a pretty lame name, but it is trying to capture the idea that this package contains toolkits for our lab's attempt to bridge our experimental observation with our computational/theoretical model. In hopes to obtain suggestions on what could be attempted for future experiments or suggestions on how we could tailor our model to reflect significant observations. 
 
+## Quick Start
+
+Download the `Library/` folder from the ModelBridge GitHub repository and copy it into your working project.
+
+```text
+your_project/
+├── Library/
+└── your_script.py
+```
+
+You can then import the modules you need from `Library`.
+
 ## Shipping Progress
 
 - [x] Documentation framework with Zensical

@@ -1,5 +1,8 @@
-# Main Branch Workflow
+---
+icon: simple/github
+---
 
+# Main Branch Workflow
 The local working copy of this repository is located at:
 
 ```bash
