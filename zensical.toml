@@ -123,8 +123,3 @@ pymdownx.tabbed.alternate_style = true
 pymdownx.tabbed.combine_header_slug = true
 pymdownx.tasklist.custom_checkbox = true
 pymdownx.tilde = {}
-
-[project.plugins.mkdocstrings.handlers.python]
-paths = ["."]
-options.docstring_style = "google"
-options.show_source = true
