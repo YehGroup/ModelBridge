@@ -1,6 +1,6 @@
 # Parameters
 
-The strain-dependent hopping parameters follow the construction in Sec. IV B of Fang *et al.*[^fang2018-sec4b].
+The strain-dependent hopping parameters follow the construction in Sec. IV B of Fang *et al.*[^fang2018-sec4b]. Yeah
 
 ## Source code
 
