@@ -4,9 +4,8 @@ Module-level documentation goes here.
 
 import numpy as np
 
-GROUPS = ["A", "B", "C", "D"]
-
 # --8<-- [start:group-size]
+GROUPS = ["A", "B", "C", "D"]
 
 GROUP_SIZE = {
     "A": 2,
@@ -15,15 +14,16 @@ GROUP_SIZE = {
     "D": 3,
 }
 
+N_ORBITALS = sum(GROUP_SIZE.values())   # 11
 # --8<-- [end:group-size]
 
-N_ORBITALS = sum(GROUP_SIZE.values())   # 11
-
+# --8<-- [start:fitted-values]
+# --8<-- [start:fitted-values-preview]
 params_H0_AA = np.zeros((3, 4, 9), dtype=float)
 params_H0_AA[0, 0, 1] = -4.873
 params_H0_AA[1, 0, 1] = -2.498
 params_H0_AA[2, 0, 0] = -0.890
-
+# --8<-- [end:fitted-values-preview]
 
 params_H0_BB = np.zeros((3, 4, 9), dtype=float)
 params_H0_BB[0, 0, 0] = -6.720
@@ -212,10 +212,13 @@ PARAMS = {
 
     (3, "D", "C"): params_H3_DC,
 }
+# --8<-- [end:fitted-values]
 
+# --8<-- [start:valid-neighbors]
 VALID = {
     0: {("A", "A"), ("B", "B"), ("C", "C"), ("D", "D")},
     1: {("B", "A"), ("D", "C")},
     2: {("A", "A"), ("B", "B"), ("C", "C"), ("D", "D")},
     3: {("D", "C")},
 }
+# --8<-- [end:valid-neighbors]

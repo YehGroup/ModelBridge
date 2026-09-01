@@ -1,0 +1,4 @@
+/* Join a code preview directly to the expandable block below it */
+.md-typeset details.example {
+    margin-top: -0.7rem !important;
+}
