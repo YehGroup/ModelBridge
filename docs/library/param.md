@@ -29,7 +29,7 @@ Following their convension, we also introduced those groups in our script:
 
 ## Valid Neighbors
 
-Shown here are the 11 orbital by 11 orbital submatrix between two unitcells. 
+Shown here are the 11 orbital by 11 orbital submatrix between two unitcells. Note that $[0]$ are used to represent zero matrix.
 
 * $H^{(0)}$: the onsite term where the the two unitcells are the same. 
 * $H^{(1)}$: the hopping term from $Mo$ to nearest $S_2$. So sometimes the two unitcell are the same, sometimes not.
@@ -40,31 +40,31 @@ Shown here are the 11 orbital by 11 orbital submatrix between two unitcells.
 
 $$
 H^{(0)} = \begin{bmatrix} 
-              H_{AA}^{(0)} & 0 & 0 & 0 \\ 
-              0 & H_{BB}^{(0)} & 0 & 0 \\ 
-              0 & 0 & H_{CC}^{(0)} & 0 \\ 
-              0 & 0 & 0 & H_{DD}^{(0)} \ 
+              H_{AA}^{(0)} & [0] & [0] & [0] \\ 
+              [0] & H_{BB}^{(0)} & [0] & [0] \\ 
+              [0] & [0] & H_{CC}^{(0)} & [0] \\ 
+              [0] & [0] & [0] & H_{DD}^{(0)} \ 
           \end{bmatrix}
 \quad,\quad
 H^{(1)} = \begin{bmatrix} 
-              0 & H_{BA}^{(1)} & 0 & 0 \\ 
-              0 & 0 & 0 & 0 \\ 
-              0 & 0 & 0 & H_{DC}^{(1)} \\ 
-              0 & 0 & 0 & 0
+              [0] & H_{BA}^{(1)} & [0] & [0] \\ 
+              [0] & [0] & [0] & [0] \\ 
+              [0] & [0] & [0] & H_{DC}^{(1)} \\ 
+              [0] & [0] & [0] & [0]
           \end{bmatrix}
 \quad,\quad
 H^{(2)} = \begin{bmatrix} 
-              H_{AA}^{(2)} & 0 & 0 & 0 \\ 
-              0 & H_{BB}^{(2)} & 0 & 0 \\ 
-              0 & 0 & H_{CC}^{(2)} & 0 \\ 
-              0 & 0 & 0 & H_{DD}^{(2)} \ 
+              H_{AA}^{(2)} & [0] & [0] & [0] \\ 
+              [0] & H_{BB}^{(2)} & [0] & [0] \\ 
+              [0] & [0] & H_{CC}^{(2)} & [0] \\ 
+              [0] & [0] & [0] & H_{DD}^{(2)} \ 
           \end{bmatrix}
 \quad,\quad
 H^{(3)} = \begin{bmatrix} 
-              0 & 0 & 0 & 0 \\ 
-              0 & 0 & 0 & 0 \\ 
-              0 & 0 & 0 & H_{DC}^{(3)} \\ 
-              0 & 0 & 0 & 0
+              [0] & [0] & [0] & [0] \\ 
+              [0] & [0] & [0] & [0] \\ 
+              [0] & [0] & [0] & H_{DC}^{(3)} \\ 
+              [0] & [0] & [0] & [0]
           \end{bmatrix}
 $$
 
