@@ -73,7 +73,7 @@ Note here that $H_{BA}^{(3)}$ is neglected on purpose, as it is not the nearest 
 </figcaption>
 </figure>
 
-In our script, `Valid` is thus used to restrict the nonzero entries of $H^{(i)}$ to only those location.
+In our script, `VALID` is thus used to restrict the nonzero entries of $H^{(i)}$ to only those location.
 ```python
 --8<-- "Library/Param.py:valid-neighbors"
 ```
