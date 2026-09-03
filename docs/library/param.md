@@ -4,7 +4,7 @@ The following scripts are all constants, conventions, and fitted values used to 
 
 ## Orbital Groups
 
-As in the paper, we take the $MoS_2$ layer to lie in the $xy$-plane. So the hamiltonian $\hat{H}$ will have the $xy$ mirror symmetry, i.e. $\hat{H}$ commutes with the reflection operator $\hat{r}: (x, y, z) \to (x, y, -z)$. And so the eigenstates $\left|n\right>$ of $\hat{H}$ are also the eigenstates of $\hat{r}$. A key observation is that **orbital states $\left|\phi\right>$ are also eigenstates of $\hat{r}$**, since $\hat{r}\left|\phi\right> = \pm \left|\phi\right>$. So eigenstates $\left|n\right>$ are restricted to linear combinations of only the even orbitals $(\hat{r}\left|\phi\right> = \left|\phi\right>)$ or linear combinations of only the odd orbitals $(\hat{r}\left|\phi\right> = -\left|\phi\right>)$. Using this understanding, the 11 orbitals of a single $MoS_2$ (1 unitcell) that form the [relavant bands](references.md#fang2018-bands) near the band gap are classified based on their even/odd parity. 
+As in the paper, we take the $MoS_2$ layer to lie in the $xy$-plane. So the hamiltonian $\hat{H}$ will have the $xy$ mirror symmetry, i.e. $\hat{H}$ commutes with the reflection operator $\hat{r}: (x, y, z) \to (x, y, -z)$. And so the eigenstates $\left|n\right>$ of $\hat{H}$ are also the eigenstates of $\hat{r}$. A key observation is that **orbital states $\left|\phi\right>$ are also eigenstates of $\hat{r}$**, since $\hat{r}\left|\phi\right> = \pm \left|\phi\right>$. So eigenstates $\left|n\right>$ are restricted to linear combinations of only the even orbitals $(\hat{r}\left|\phi\right> = \left|\phi\right>)$ or linear combinations of only the odd orbitals $(\hat{r}\left|\phi\right> = -\left|\phi\right>)$. Using this understanding, the 11 orbitals of a single $MoS_2$ (1 unitcell) that form the [relavant bands](references.md#fang2018-bands) near the band gap are classified based on their even/odd parity (denote as $o/e$ superscript).
 
 $$
 \begin{align*}
@@ -15,7 +15,7 @@ $$
 \end{align*}
 $$
 
-Here $o/e$ superscript stands for odd/even. Following their convension, we also introduced those groups in our script:
+Following their convension, we also introduced those groups in our script:
 ```python
 --8<-- "Library/Param.py:group-size"
 ```
