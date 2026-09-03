@@ -1,4 +1,4 @@
-# Neighbors (`Neighbors.py`)
+# Neighbor (`Neighbor.py`)
 
 It desrves a better name. Currently this code is to give lattice indices based on physical position of the strained $MoS_2$ simulation.
 
