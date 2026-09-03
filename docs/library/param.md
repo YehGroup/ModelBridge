@@ -4,7 +4,7 @@ The following scripts are all constants, conventions, and fitted values used to 
 
 ## Orbital Groups
 
-As in the paper, we take the $MoS_2$ layer to lie in the $xy$-plane. So the hamiltonian $\hat{H}$ will have the $xy$ mirror symmetry, i.e. $\hat{H}$ commutes with the reflection operator $\hat{r}: (x, y, z) \to (x, y, -z)$. And so the eigenstates $\left|n\right>$ of H are also the eigenstates of $\hat{r}$. A key observation is that **orbital states $\left|\phi\right>$ are also eigenstates of $\hat{r}$**, since $\hat{r}\left|\phi\right> = \pm \left|\phi\right>$. So eigenstates $\left|n\right>$ are restricted to linear combinations of only the even orbitals $(\hat{r}\left|\phi\right> = \left|\phi\right>)$ or linear combinations of only the odd orbitals $(\hat{r}\left|\phi\right> = -\left|\phi\right>)$. Using this understanding, the 11 orbitals of a single $MoS_2$ (1 unitcell) that form the [relavant bands](references.md#fang2018-bands) near the band gap are classified based on their even/odd parity. 
+As in the paper, we take the $MoS_2$ layer to lie in the $xy$-plane. So the hamiltonian $\hat{H}$ will have the $xy$ mirror symmetry, i.e. $\hat{H}$ commutes with the reflection operator $\hat{r}: (x, y, z) \to (x, y, -z)$. And so the eigenstates $\left|n\right>$ of $\hat{H}$ are also the eigenstates of $\hat{r}$. A key observation is that **orbital states $\left|\phi\right>$ are also eigenstates of $\hat{r}$**, since $\hat{r}\left|\phi\right> = \pm \left|\phi\right>$. So eigenstates $\left|n\right>$ are restricted to linear combinations of only the even orbitals $(\hat{r}\left|\phi\right> = \left|\phi\right>)$ or linear combinations of only the odd orbitals $(\hat{r}\left|\phi\right> = -\left|\phi\right>)$. Using this understanding, the 11 orbitals of a single $MoS_2$ (1 unitcell) that form the [relavant bands](references.md#fang2018-bands) near the band gap are classified based on their even/odd parity. 
 
 $$
 \begin{align*}
@@ -79,7 +79,7 @@ In our script, `VALID` is thus used to restrict the nonzero entries of $H^{(i)}$
 ```
 
 !!! Note "By the way"
-    Remember the Hermitian requirement is only for the full hamiltonian $H$, so such requirement need not apply to individual $H^{(i)}$. And this is why $H^{(1)}$ only recorded the hopping $Mo \to S_2$, as the reverse direction $S_2 \to Mo$ will be included from the conjugate requirement of $H$. Coding wise, this means $(H^{(1)})^{\dagger}$ will be added to the transpose position (i.e. reflected across $H$'s diagonal) of where $H^{(1)}$ lies in $H$. 
+    Remember the Hermitian requirement is only for the full hamiltonian $\hat{H}$, so such requirement need not apply to individual $H^{(i)}$. And this is why $H^{(1)}$ only recorded the hopping $Mo \to S_2$, as the reverse direction $S_2 \to Mo$ will be included from the conjugate requirement of $H$. Coding wise, this means $(H^{(1)})^{\dagger}$ will be added to the transpose position (i.e. reflected across $H$'s diagonal) of where $H^{(1)}$ lies in $H$. 
 
 
 ## Fitted Entries of Orbital Couplings
