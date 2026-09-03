@@ -18,7 +18,7 @@ nav = [
 
   { "Library" = [
       { "Parameters" = "library/param.md" },
-      { "Neighbors" = "library/Neighbors.md" },
+      { "Neighbors" = "library/neighbors.md" },
       { "References" = "library/references.md" },
   ]},
 
