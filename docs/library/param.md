@@ -15,7 +15,7 @@ $$
 \end{align*}
 $$
 
-Following their convension, we also introduced those groups in our script:
+Here $o/e$ superscript stands for odd/even. Following their convension, we also introduced those groups in our script:
 ```python
 --8<-- "Library/Param.py:group-size"
 ```
