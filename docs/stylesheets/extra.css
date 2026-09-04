@@ -2,3 +2,124 @@
 .md-typeset details.example {
     margin-top: -0.7rem !important;
 }
+
+/* =========================================================
+   WHOLE EXPANDABLE CODE BLOCK
+   ========================================================= */
+
+.expandable-code {
+    position: relative;
+    margin-bottom: 1rem;
+
+    /* One set of rounded corners for the entire component */
+    border-radius: 0.5rem;
+    overflow: hidden;
+
+    background: var(--md-code-bg-color);
+
+    --collapsed-height: 10rem;
+}
+
+
+/* =========================================================
+   OPTIONAL TITLE
+   ========================================================= */
+
+.expand-code-title {
+    margin: 0;
+    padding: 0.55rem 0.8rem;
+
+    background: color-mix(
+        in srgb,
+        var(--md-code-bg-color) 90%,
+        var(--md-default-fg-color) 10%
+    );
+
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    /* Wrapper owns the rounded corners */
+    border-radius: 0;
+}
+
+
+/* =========================================================
+   CODE BLOCK
+   ========================================================= */
+
+.expandable-code .highlight {
+    position: relative;
+
+    max-height: var(--collapsed-height);
+    overflow: hidden;
+
+    margin: 0 !important;
+    border-radius: 0 !important;
+}
+
+.expandable-code .highlight pre {
+    margin: 0 !important;
+    border-radius: 0 !important;
+}
+
+
+/* =========================================================
+   FADE
+   ========================================================= */
+
+.expandable-code:not(.expanded) .highlight::after {
+    content: "";
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 3rem;
+
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        var(--md-code-bg-color)
+    );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   EXPANDED
+   ========================================================= */
+
+.expandable-code.expanded .highlight {
+    max-height: none;
+    overflow: visible;
+}
+
+
+/* =========================================================
+   EXPAND / COLLAPSE BUTTON
+   ========================================================= */
+
+.expand-code-button {
+    display: block;
+    width: 100%;
+
+    margin: 0;
+    padding: 0.45rem;
+
+    border: 0;
+    border-radius: 0;
+
+    background: var(--md-code-bg-color);
+    color: var(--md-default-fg-color--light);
+
+    font-size: 0.75rem;
+    text-align: center;
+
+    cursor: pointer;
+}
+
+.expand-code-button:hover {
+    color: var(--md-accent-fg-color);
+}

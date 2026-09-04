@@ -87,11 +87,8 @@ Let $\alpha, \beta$ be elements of $\{A, B, C, D\}$, and $i \in \{0, 1, 2, 3\}$.
 
 To find those numbers, the paper used some density field theory + localized Wannier functions black magic ([Fang et al. (2018), APPENDIX A](references.md#fang2018-DFT+Wannier)). I am not entirely clear on how they did it, but since they provided those numbers, I just happily copied as shown in the script below. 
 
+<div class="expandable-code" data-lines="5" markdown="1">
 ```python
---8<-- "Library/Param.py:fitted-values-preview"
+--8<-- "Library/Param.py:fitted-values"
 ```
-??? example "Show full fitted values"
-
-    ```python
-    --8<-- "Library/Param.py:fitted-values"
-    ```
+</div>
