@@ -23,7 +23,7 @@ You can then import the modules you need from `Library`.
 - [x] Synced some code snippets from source files into documentation
 - [x] Parameter definitions for the current model (`Library/Param.py`)
 - [ ] Create and maintain dependences
-- [ ] Codes for Reading and interacting with LAMMPS
+- [x] Codes for Reading and interacting with LAMMPS
 - [ ] Strain-related functions
 - [ ] Hamiltonian construction
 - [ ] MPO construction

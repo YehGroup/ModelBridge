@@ -203,6 +203,8 @@ This is just a particular helpful function when we only want to construct Hamilt
 
 ## Neighbors of a $MoS_2$ unit cell
 
+
+
 <div class="expandable-code" data-lines="4" data-title="Source Code" markdown="1">
 ```python
 --8<-- "Library/Neighbor.py:neighbors"
