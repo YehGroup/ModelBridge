@@ -20,6 +20,10 @@ nav = [
   { "Library" = [
       { "Parameters" = "library/param.md" },
       { "Neighbor" = "library/neighbor.md" },
+      { "Compute Strain" = "library/strain.md" },
+      { "Construct Hamiltonian" = "library/hamiltonian.md" },
+      { "Tensor Chain Form" = "library/mpo.md" },
+      { "Visualization" = "library/visual.md" },
       { "References" = "library/references.md" },
   ]},
 
