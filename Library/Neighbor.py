@@ -50,6 +50,7 @@ def read_lammps_steps(filename, req_steps):
     return tuple(frames[step] for step in req_steps)
 # --8<-- [end:read-lammps]
 
+# --8<-- [start:cells-types]
 def extract_mo_cells(ref_df, mo_types=(2, 5, 8, 11)):
     mo_df = ref_df[ref_df["type"].isin(mo_types)].copy()
     mo_df = mo_df.sort_values("id").reset_index(drop=True)
@@ -58,20 +59,10 @@ def extract_mo_cells(ref_df, mo_types=(2, 5, 8, 11)):
         raise ValueError("No Mo atoms found.")
 
     return mo_df
+# --8<-- [end:cells-types]
 
-
+# --8<-- [start:cells-indices]
 def assign_cell_indices(mo_df, a=3.12, theta_deg=0.0, search_radius=1.0):
-    """
-    Assign each Mo atom to the closest ideal lattice site.
-
-    Origin = Mo atom with lowest x, then lowest y.
-
-    Returns
-    -------
-    cells : DataFrame with columns
-        cell, mo_id, x, y, z, cell_x, cell_y
-    """
-
     xy = mo_df[["x", "y"]].to_numpy(float)
 
     # Mo atom closest to x = 0, y = 0
@@ -136,19 +127,10 @@ def assign_cell_indices(mo_df, a=3.12, theta_deg=0.0, search_radius=1.0):
     })
 
     return cells
+# --8<-- [end:cells-indices]
 
-
+# --8<-- [start:sub-cells]
 def select_matrix_cells(cells, chosen_cell_x=0, chosen_cell_y=0, supercell_side=1):
-    """
-    Select a supercell_side x supercell_side block in lattice coordinates.
-
-    For odd supercell_side:
-        The block is centered on (chosen_cell_x, chosen_cell_y).
-
-    For even supercell_side:
-        (chosen_cell_x, chosen_cell_y) is the bottom-left cell
-        of the central 2x2 block.
-    """
 
     if supercell_side <= 0:
         raise ValueError("supercell_side must be positive.")
@@ -203,11 +185,12 @@ def select_matrix_cells(cells, chosen_cell_x=0, chosen_cell_y=0, supercell_side=
     selected["cell"] = np.arange(len(selected), dtype=int)
 
     return selected
-
+# --8<-- [end:sub-cells]
 
 '''
 This is the list of hopping cell sites that A or C source will hop to. H2 only contains half of such hopping list bc looping over all cells will double count same type hopping. 
 '''
+# --8<-- [start:neighbors]
 def C3_half_neighbor_list(nx, ny):
     H1 = [
         ((nx - 1, ny - 1), 0),
@@ -228,7 +211,7 @@ def C3_half_neighbor_list(nx, ny):
     ]
 
     return H1, H2, H3
-
+# --8<-- [end:neighbors]
 
 
 def orb_i(cell_lookup, nx, ny, alpha):
