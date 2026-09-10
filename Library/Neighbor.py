@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-from Param import GROUP_SIZE
+from .Param import GROUP_SIZE
 
 # --8<-- [start:read-lammps]
 def read_lammps_steps(filename, req_steps):

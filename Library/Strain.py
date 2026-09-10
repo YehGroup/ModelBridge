@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from scipy.spatial import cKDTree
 from scipy.interpolate import griddata
 from pathlib import Path
-from Neighbor import read_lammps_steps
+from .Neighbor import read_lammps_steps
 
 def compute_strain_tensor_from_frames(ref_df, def_df, atom_types, cutoff_radius=8.0):
     """

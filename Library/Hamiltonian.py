@@ -1,6 +1,6 @@
 import numpy as np
-from Neighbor import orb_i, C3_half_neighbor_list
-from Param import PARAMS, GROUP_SIZE, GROUPS, VALID
+from .Neighbor import orb_i, C3_half_neighbor_list
+from .Param import PARAMS, GROUP_SIZE, GROUPS, VALID
 
 def H0(params, uxx, uyy, uxy):
     t, a, b = params[0,:,:], params[1,:,:], params[2,:,:]

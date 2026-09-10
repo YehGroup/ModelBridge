@@ -3,9 +3,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from scipy.linalg import eigvalsh
 
-from Neighbor import read_lammps_steps, extract_mo_cells, assign_cell_indices, select_matrix_cells
-from Hamiltonian import build_full_H, build_full_H_open
-from Strain import compute_strain_tensor_from_frames
+from Library.Neighbor import read_lammps_steps, extract_mo_cells, assign_cell_indices, select_matrix_cells
+from Library.Hamiltonian import build_full_H, build_full_H_open
+from Library.Strain import compute_strain_tensor_from_frames
 
 
 '''
