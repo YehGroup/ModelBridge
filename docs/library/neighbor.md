@@ -69,7 +69,7 @@ Specifically, we distinguish different dumped chunck of data using `ITEM: TIMEST
 
     We use `missing` to record any requested timesteps that were not found in the dump files. For safety, if any requested timestep is missing, the function stops immediately and returns nothing.
 
-## Labeling Unit Cell Lattices
+## Labeling Unitcell Lattices
 The two functions below work together to give our system appropriate lattice indices. 
 
 ### Select Mo atoms (`extract_mo_cells`)
@@ -104,6 +104,7 @@ Assign each Mo atom to the closest ideal lattice site.
 
 1. Use `argmin` to find the $Mo$ atom $j$ that is closest to $(0, 0)$ and chose it as the lattice origin. i.e. $\mathbf{r}_j \equiv \mathbf{r}_0$.
 2. Given the lattice constant $a$ and the rotation angle `theta_deg`, written as $\theta$, we can compute 
+    <div id="lattice-coordinate" class="math-target" markdown="block">
 
     $$
     \begin{align*}
@@ -113,6 +114,7 @@ Assign each Mo atom to the closest ideal lattice site.
     \end{align*}
     $$
 
+    </div>
     where $\hat{R}(\theta)$ is the rotation matrix of angle $\theta$. At this point, the ideal position of any $Mo$ atom can be written as 
     
     <div id="real-to-lattice" class="math-target" markdown="block">
@@ -179,7 +181,7 @@ Assign each Mo atom to the closest ideal lattice site.
 
     This will not be a accurate function if the lattice constant of the system is either varying strongly or very different from the input `a`. So preferably use this for a relaxed system and you have checked using other methods what the histogram of the lattice distance $Mo - Mo$.
 
-### A Subset of All Unit Cells (`select_matrix_cells`)
+### A Subset of All Unitcells (`select_matrix_cells`)
 This is just a particular helpful function when we only want to construct Hamiltonian for a subset of all the $MoS_2$ that we simulated. It selects a `supercell_side` x `supercell_side` block in lattice coordinates.
 
 ??? info "Input"
@@ -205,9 +207,39 @@ This is just a particular helpful function when we only want to construct Hamilt
 ```
 </div> 
 
-## Neighbors of a $MoS_2$ unit cell
+## Neighbors of a $MoS_2$ Unitcell (`C3_half_neighbor_list`)
 
+This gives the set of hopping unitcells as describes in [Fang et al. (2018), Sec. II C](references.md#fang2018-hopping). 
 
+??? info "Input"
+    * `nx`: The integer steps along (horizontal-ish) [$\mathbf{a}_1 \text{ direction}$](#lattice-coordinate). i.e. first component of the lattice coordinate
+    * `ny`: The integer steps along (vertical-ish) [$\mathbf{a}_2 \text{ direction}$](#lattice-coordinate). i.e. second component of the lattice coordinate
+
+??? info "Input"
+    * `H1`: The lattice coordinates and [$C_3 \text{ orders}$](#c3-definition) of taget hopping unitcells from the lattice unitcell `(nx, ny)` that $H^{(1)}$ describes. 
+    * `H2`: The lattice coordinates and [$C_3 \text{ orders}$](#c3-definition) of taget hopping unitcells from the lattice unitcell `(nx, ny)` that $H^{(2)}$ describes. 
+    * `H3`: The lattice coordinates and [$C_3 \text{ orders}$](#c3-definition) of taget hopping unitcells from the lattice unitcell `(nx, ny)` that $H^{(3)}$ describes. 
+
+The image below shows visually where the electron will hop to if they are in $d$ orbitals (in [orbital group](param.md#orbital-groups) $A$ or $C$ ). For simplicity I set `(nx,ny) = (0,0)`.
+
+* In this image $Mo$ is represented as $\text{O}$ and $S_2$ is represented as $\text{X}$. 
+ 
+* Since $d$ orbitals roughly center on $Mo$ atoms, the image has the red dot (source) to be on $\text{O}$.
+ 
+* The possible hopping location in the unitcells are circled, and solid `-`, dashed `--`, and dotted `...` line corressponds to hopping described by $H^{(1)}$, $H^{(2)}$, and $H^{(3)}$ respectively. 
+
+* `R1`, `R2` and `R3` represents different $C_3$ orders 
+<span id="c3-definition" class="math-target">(orders of the threefold rotation symmetry that $MoS_2$ has)</span> 
+of these hopping. Why $C_3$ symmetry are used will be explained [here](no source yet). 
+
+* Since multiple orbital groups shares one location ($A/C$ is near $Mo$ while $B/D$ is near $S_2$), there can be multiple ways to hop to a target unitcell. The number of ways is represented by the number of circles in the image.
+
+* Orange loop shows what a single unitcell is in this image. And the red arrows are $\mathbf{a}_1$ and $\mathbf{a}_2$. 
+
+![Neighbors](../assets/H_offsers_AC_source_sketch.png) 
+
+Finally, as an exercise for the reader, this explains why $H_{BA}^{(3)}$ is neglected ☺.
+<a id="hopping-term-neglect"></a>
 
 <div class="expandable-code" data-lines="4" data-title="Source Code" markdown="1">
 ```python

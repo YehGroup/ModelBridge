@@ -3,6 +3,7 @@
 The following scripts are all constants, conventions, and fitted values used to reconstruct the strain-dependent tight-binding Hamiltonian for transition-metal dichalcogenides (TMDCs) as described in [Fang et al. (2018), Sec. II C](references.md#fang2018). We focused on $MoS_2$ as an generalizable example for all other TMDCs. 
 
 ## Orbital Groups
+<a id="orbital-Groups"></a>
 
 As in the paper, we take the $MoS_2$ layer to lie in the $xy$-plane. So the hamiltonian $\hat{H}$ will have the $xy$ mirror symmetry, i.e. $\hat{H}$ commutes with the reflection operator $\hat{r}: (x, y, z) \to (x, y, -z)$. And so the eigenstates $\left|n\right>$ of $\hat{H}$ are also the eigenstates of $\hat{r}$. A key observation is that **orbital states $\left|\phi\right>$ are also eigenstates of $\hat{r}$**, since $\hat{r}\left|\phi\right> = \pm \left|\phi\right>$. So eigenstates $\left|n\right>$ are restricted to linear combinations of only the even orbitals $(\hat{r}\left|\phi\right> = \left|\phi\right>)$ or linear combinations of only the odd orbitals $(\hat{r}\left|\phi\right> = -\left|\phi\right>)$. Using this understanding, the 11 orbitals of a single $MoS_2$ (1 unitcell) that form the [relavant bands](references.md#fang2018-bands) near the band gap are classified based on their even/odd parity (denote as $o/e$ superscript).
 
@@ -69,7 +70,7 @@ H^{(3)} = \begin{bmatrix}
 $$
 
 <figcaption markdown="span">
-Note here that $H_{BA}^{(3)}$ is neglected on purpose, as it is not the nearest neighbor orbital based on lattice geometry (link to that image).
+Note here that $H_{BA}^{(3)}$ is neglected on purpose, as it is not the nearest neighbor orbital based on [lattice geometry](neighbor.md#hopping-term-neglect).
 </figcaption>
 </figure>
 
