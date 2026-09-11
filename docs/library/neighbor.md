@@ -78,7 +78,7 @@ The two functions below work together to give our system appropriate lattice ind
     * `mo_types`: $Mo$ atoms' type id. Default: `mo_types=(2, 5, 8, 11)`.
 
 ??? info "Output"
-    * `mo_df`: A dataframe that only contains rows of $Mo$  atoms. Where the rows are in acending order of particle id. 
+    * `mo_df`: A dataframe that only contains rows of $Mo$ atoms. Where the rows are in acending order of particle id. 
 
 <div class="expandable-code" data-lines="4" data-title="Source Code" markdown="1">
 ```python
@@ -114,12 +114,16 @@ Assign each Mo atom to the closest ideal lattice site.
     $$
 
     where $\hat{R}(\theta)$ is the rotation matrix of angle $\theta$. At this point, the ideal position of any $Mo$ atom can be written as 
-
+    
+    <div id="real-to-lattice" class="math-target" markdown="block">
+    
     $$
-    \begin{align*}
+    \begin{align}
     \mathbf{r}_{(n_1, n_2)} = \mathbf{r}_0 + n_1 \mathbf{a}_1 + n_2 \mathbf{a}_2 = \mathbf{r}_0 + B \begin{bmatrix} n_1 \\ n_2  \end{bmatrix}
-    \end{align*}
+    \end{align}
     $$
+
+    </div>
 
     where $n_1, n_2$ are integers. $B$ is the `basis` matrix defined as 
 
@@ -129,7 +133,7 @@ Assign each Mo atom to the closest ideal lattice site.
     \end{align*}
     $$
 
-3. For any actual, possibly distorted $Mo$ atom in position $\mathbf{r}_i$, we have the corresponding lattice coordinates $f_1, f_2$ by multiplying $B^{-1}$
+3. Given [previous equation](#real-to-lattice), for any actual, possibly distorted $Mo$ atom in position $\mathbf{r}_i$, we can obtain the corresponding lattice coordinates $f_1, f_2$ by multiplying $B^{-1}$
 
     $$
     \begin{align*}
@@ -161,7 +165,7 @@ Assign each Mo atom to the closest ideal lattice site.
         C = \{(p + \Delta p , q + \Delta q) : |\Delta p| \leq N_s \ , \  |\Delta q| \leq N_s \}
     $$
 
-    The coordinate in $C$ that is the closest to $\mathbf{r}_i$ will be assigned as the lattice coordinate `(cell_x, cell_y)` of atom $i$.
+    The lattice coordinate in $C$ that is the closest to $\mathbf{r}_i$ will be assigned as the lattice coordinate `(cell_x, cell_y)` of atom $i$.
 
 5. Lastly, we give those cells a seperate index: `cell` that is different from their particle id, for conceptual clarity.  
 

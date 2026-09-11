@@ -14,7 +14,20 @@ your_project/
 └── your_script.py
 ```
 
-You can then import the modules you need from `Library`.
+You can then import the modules you need from `Library`. For example
+```python
+from Library.Hamiltonian import build_full_H
+```
+See a standalone working example in [`Example_Eigen.py`](https://github.com/YehGroup/ModelBridge/blob/main/Example_Eigen.py). 
+
+??? info "Install Dependences"
+
+    The easiest way is to create an virtual environment on `your_project` folder by copying the [`setup_env.sh`](https://github.com/YehGroup/ModelBridge/blob/main/setup_env.sh) to `your_project` folder and run it in your terminal:
+
+    ```terminal
+    chmod +x setup_env.sh
+    ./setup_env.sh
+    ```
 
 ## Shipping Progress
 
@@ -22,8 +35,9 @@ You can then import the modules you need from `Library`.
 - [x] Automatic GitHub Pages deployment
 - [x] Synced some code snippets from source files into documentation
 - [x] Parameter definitions for the current model (`Library/Param.py`)
-- [ ] Create and maintain dependences
+- [x] Create and maintain dependences
 - [x] Codes for Reading and interacting with LAMMPS
+- [ ] Lattice labeling functions
 - [ ] Strain-related functions
 - [ ] Hamiltonian construction
 - [ ] MPO construction
