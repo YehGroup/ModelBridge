@@ -70,7 +70,7 @@ H^{(3)} = \begin{bmatrix}
 $$
 
 <figcaption markdown="span">
-Note here that $H_{BA}^{(3)}$ is neglected on purpose, as it is not the nearest neighbor orbital based on [lattice geometry](neighbor.md#hopping-term-neglect).
+Note here that $H_{BA}^{(3)}$ is neglected on purpose, as it is too small (for some reason, maybe the author calculated and think it was too small).
 </figcaption>
 </figure>
 
@@ -93,3 +93,9 @@ To find those numbers, the paper used some density field theory + localized Wann
 --8<-- "Library/Param.py:fitted-values"
 ```
 </div>
+
+Note here `np.zeros((3,4,9), dtype=float)` is following the convention that the needed parameters has 
+
+* 3 kinds of $C_3$ invariant strain: unstrained ($1$), the scalar strain ($u_{xx}+u_{yy}$) which is a trace over the strain tensor, the plane span by differential and shear strain ($u_{xx}-u_{yy}$ and $2u_{xy}$). (Further information look into character table for irreducible representations of $C_3$ group restricted to $\mathbb{R}$ matrix entries.)
+* 4 kinds of neighbors: $i \in \{0, 1, 2, 3\}$
+* 9 entries for a 3x3 matrix. 

@@ -24,6 +24,10 @@ nav = [
       { "References" = "library/references.md" },
   ]},
 
+  { "Library_Pearce" = [
+      { "Parameters" = "library/param_Pearce2016.md" },
+  ]},
+
   { "Developer Guide" = [
       { "Github Basic" = "developer_guide/gitHub_basic.md" },
       { "Markdown Basic" = "developer_guide/markdown.md" },

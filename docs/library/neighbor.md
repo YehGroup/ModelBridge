@@ -238,7 +238,8 @@ of these hopping. Why $C_3$ symmetry are used will be explained [here](no source
 
 ![Neighbors](../assets/H_offsers_AC_source_sketch.png) 
 
-Finally, as an exercise for the reader, this explains why $H_{BA}^{(3)}$ is neglected ☺.
+The following are encoding on a unitcell level the hopping diagram above. 
+
 <a id="hopping-term-neglect"></a>
 
 <div class="expandable-code" data-lines="4" data-title="Source Code" markdown="1">

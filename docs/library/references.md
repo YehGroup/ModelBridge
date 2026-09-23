@@ -30,3 +30,12 @@ Physical Review B 98, 075106 (2018).
 <summary>The DFT calculations in this paper were carried out using the Vienna ab initio simulation package ... The extended Bloch wave-function basis can be transformed into the maximally localized Wannier functions basis as implemented in the WANNIER 90 code. With this transformation, the effective tight-binding Hamiltonian for a designated group of bands of the material can be constructed. </summary>
 [[Fang2018_tbH_for_2D_materials_with_hex_symm.pdf#page=9&selection=256,0,285,61&color=yellow|Fang2018_tbH_for_2D_materials_with_hex_symm, p.9]]
 </details>
+
+
+## Pearce et al. (2016) { #pearce2016 }
+
+A. J. Pearce, E. Mariani, and G. Burkard, &#x20;  
+Tight-binding approach to strain and curvature in monolayer transition-metal dichalcogenides, &#x20;  
+Physical Review B 94, 155416 (2016).  
+[APS article](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.94.155416) ·
+[DOI](https://doi.org/10.1103/PhysRevB.94.155416)
