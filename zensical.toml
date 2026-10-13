@@ -21,6 +21,7 @@ nav = [
       { "Construct Hamiltonian" = "library/hamiltonian.md" },
       { "Tensor Chain Form" = "library/mpo.md" },
       { "Visualization" = "library/visual.md" },
+      { "Real to K space" = "library/kspace.md" },
       { "References" = "library/references.md" },
   ]},
 
