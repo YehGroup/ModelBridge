@@ -45,10 +45,6 @@ The right-hand plot uses normalized reciprocal coordinates $\widetilde{\mathbf k
 <line x1="162.00" y1="257.14" x2="210.00" y2="229.43" stroke="currentColor" stroke-width="1.8"/>
 <line x1="258.00" y1="257.14" x2="210.00" y2="229.43" stroke="currentColor" stroke-width="1.8"/>
 <line x1="258.00" y1="257.14" x2="306.00" y2="229.43" stroke="currentColor" stroke-width="1.8"/>
-<line x1="210.00" y1="174.00" x2="306.00" y2="174.00" stroke="#e88800" stroke-width="2.5" marker-end="url(#arr)"/>
-<text x="248.00" y="192.00" font-size="16" fill="#d77d00">a<tspan baseline-shift="sub" font-size="11">1</tspan></text>
-<line x1="210.00" y1="174.00" x2="162.00" y2="90.86" stroke="#e88800" stroke-width="2.5" marker-end="url(#arr)"/>
-<text x="190.00" y="130.43" font-size="16" fill="#d77d00">a<tspan baseline-shift="sub" font-size="11">2</tspan></text>
 <circle cx="210.00" cy="174.00" r="6.2" fill="#1957ea"/>
 <circle cx="114.00" cy="174.00" r="6.2" fill="#1957ea"/>
 <circle cx="306.00" cy="174.00" r="6.2" fill="#1957ea"/>
@@ -62,6 +58,10 @@ The right-hand plot uses normalized reciprocal coordinates $\widetilde{\mathbf k
 <circle cx="114.00" cy="229.43" r="6.2" fill="#059822"/>
 <circle cx="210.00" cy="229.43" r="6.2" fill="#059822"/>
 <circle cx="306.00" cy="229.43" r="6.2" fill="#059822"/>
+<line x1="210.00" y1="174.00" x2="306.00" y2="174.00" stroke="#e88800" stroke-width="2.5" marker-end="url(#arr)"/>
+<text x="248.00" y="192.00" font-size="16" fill="#d77d00">a<tspan baseline-shift="sub" font-size="11">1</tspan></text>
+<line x1="210.00" y1="174.00" x2="162.00" y2="90.86" stroke="#e88800" stroke-width="2.5" marker-end="url(#arr)"/>
+<text x="190.00" y="130.43" font-size="16" fill="#d77d00">a<tspan baseline-shift="sub" font-size="11">2</tspan></text>
 </g>
 <g id="reciprocal">
 <line x1="634.00" y1="183.00" x2="608.00" y2="167.99" stroke="currentColor" stroke-width="1.8"/>
@@ -79,10 +79,6 @@ The right-hand plot uses normalized reciprocal coordinates $\widetilde{\mathbf k
 <line x1="556.00" y1="318.10" x2="608.00" y2="258.06" stroke="currentColor" stroke-width="1.8"/>
 <line x1="634.00" y1="273.07" x2="608.00" y2="258.06" stroke="currentColor" stroke-width="1.8"/>
 <line x1="634.00" y1="273.07" x2="686.00" y2="213.02" stroke="currentColor" stroke-width="1.8"/>
-<line x1="634.00" y1="183.00" x2="712.00" y2="137.97" stroke="#e88800" stroke-width="2.5" marker-end="url(#arr)"/>
-<text x="663.00" y="178.48" font-size="16" fill="#d77d00">b<tspan baseline-shift="sub" font-size="11">1</tspan></text>
-<line x1="634.00" y1="183.00" x2="634.00" y2="92.93" stroke="#e88800" stroke-width="2.5" marker-end="url(#arr)"/>
-<text x="640.00" y="135.97" font-size="16" fill="#d77d00">b<tspan baseline-shift="sub" font-size="11">2</tspan></text>
 <circle cx="634.00" cy="183.00" r="6.2" fill="#1957ea"/>
 <circle cx="556.00" cy="228.03" r="6.2" fill="#1957ea"/>
 <circle cx="712.00" cy="137.97" r="6.2" fill="#1957ea"/>
@@ -96,5 +92,9 @@ The right-hand plot uses normalized reciprocal coordinates $\widetilde{\mathbf k
 <circle cx="530.00" cy="303.09" r="6.2" fill="#059822"/>
 <circle cx="608.00" cy="258.06" r="6.2" fill="#059822"/>
 <circle cx="686.00" cy="213.02" r="6.2" fill="#059822"/>
+<line x1="634.00" y1="183.00" x2="712.00" y2="137.97" stroke="#e88800" stroke-width="2.5" marker-end="url(#arr)"/>
+<text x="663.00" y="178.48" font-size="16" fill="#d77d00">b<tspan baseline-shift="sub" font-size="11">1</tspan></text>
+<line x1="634.00" y1="183.00" x2="634.00" y2="92.93" stroke="#e88800" stroke-width="2.5" marker-end="url(#arr)"/>
+<text x="640.00" y="135.97" font-size="16" fill="#d77d00">b<tspan baseline-shift="sub" font-size="11">2</tspan></text>
 </g>
 </svg>
